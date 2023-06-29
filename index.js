@@ -2,8 +2,8 @@ const express = require("express");
 const port = process.env.PORT || 3003;
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const connectDB = require("../todo-backend/db/connectDB");
-const todoRoute = require('../todo-backend/routes/todoRoute');
+const connectDB = require("./db/connectDB");
+const todoRoute = require('./routes/todoRoutes');
 const app = express();
 
 // connection with database...
