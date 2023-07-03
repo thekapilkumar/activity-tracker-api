@@ -7,6 +7,20 @@ const todoSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true
+    },
+    valueAddChecks: {
+        check1: {
+            type: Boolean
+        },
+        check2: {
+            type: Boolean
+        },
+        check3: {
+            type: Boolean
+        },
+        check4: {
+            type: Boolean
+        }
     }
 });
 
