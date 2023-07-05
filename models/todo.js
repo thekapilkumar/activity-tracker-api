@@ -21,7 +21,10 @@ const todoSchema = new mongoose.Schema({
         check4: {
             type: Boolean
         }
-    }
+    },
+    actionItemStatus: {
+        type: String
+    },
 });
 
 const Todo = mongoose.model('todoList', todoSchema);

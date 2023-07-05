@@ -2,11 +2,12 @@ const Todo = require("../models/todo");
 
 const addTodo = async (req, res) => {
   try {
-    const { task, description, valueAddChecks = null } = req.body;
+    const { task, description, valueAddChecks = null, actionItemStatus = null } = req.body;
     const todo = new Todo({
       task,
       description,
-      valueAddChecks: valueAddChecks
+      valueAddChecks: valueAddChecks,
+      actionItemStatus: actionItemStatus
     });
     await todo.save();
     return res.status(200).json({
